@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{35A5ED52-8505-3A77-83A6-1B270B78AEBC}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ncnn</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\haomaiyi\ncnn-win\build_vs2015\src\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ncnn.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ncnn</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\haomaiyi\ncnn-win\build_vs2015\src\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ncnn.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ncnn</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\haomaiyi\ncnn-win\build_vs2015\src\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ncnn.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ncnn</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\haomaiyi\ncnn-win\build_vs2015\src\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ncnn.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ncnn</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\haomaiyi\ncnn-win\src;D:\haomaiyi\ncnn-win\build_vs2015\src;D:\haomaiyi\ncnn-win\src\layer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\haomaiyi\ncnn-win\src\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/haomaiyi/ncnn-win/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\Administrator\Desktop\zhuqi\cmake-3.4.1-win32-x86\bin\cmake.exe -HD:/haomaiyi/ncnn-win -BD:/haomaiyi/ncnn-win/build_vs2015 --check-stamp-file D:\haomaiyi\ncnn-win\build_vs2015\src\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/haomaiyi/ncnn-win/src/CMakeLists.txt;D:\haomaiyi\ncnn-win\src\CMakeLists.txt;D:\haomaiyi\ncnn-win\src\platform.h.in;D:\haomaiyi\ncnn-win\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\haomaiyi\ncnn-win\build_vs2015\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/haomaiyi/ncnn-win/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\Administrator\Desktop\zhuqi\cmake-3.4.1-win32-x86\bin\cmake.exe -HD:/haomaiyi/ncnn-win -BD:/haomaiyi/ncnn-win/build_vs2015 --check-stamp-file D:\haomaiyi\ncnn-win\build_vs2015\src\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/haomaiyi/ncnn-win/src/CMakeLists.txt;D:\haomaiyi\ncnn-win\src\CMakeLists.txt;D:\haomaiyi\ncnn-win\src\platform.h.in;D:\haomaiyi\ncnn-win\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\haomaiyi\ncnn-win\build_vs2015\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/haomaiyi/ncnn-win/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\Administrator\Desktop\zhuqi\cmake-3.4.1-win32-x86\bin\cmake.exe -HD:/haomaiyi/ncnn-win -BD:/haomaiyi/ncnn-win/build_vs2015 --check-stamp-file D:\haomaiyi\ncnn-win\build_vs2015\src\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/haomaiyi/ncnn-win/src/CMakeLists.txt;D:\haomaiyi\ncnn-win\src\CMakeLists.txt;D:\haomaiyi\ncnn-win\src\platform.h.in;D:\haomaiyi\ncnn-win\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\haomaiyi\ncnn-win\build_vs2015\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/haomaiyi/ncnn-win/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\Administrator\Desktop\zhuqi\cmake-3.4.1-win32-x86\bin\cmake.exe -HD:/haomaiyi/ncnn-win -BD:/haomaiyi/ncnn-win/build_vs2015 --check-stamp-file D:\haomaiyi\ncnn-win\build_vs2015\src\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/haomaiyi/ncnn-win/src/CMakeLists.txt;D:\haomaiyi\ncnn-win\src\CMakeLists.txt;D:\haomaiyi\ncnn-win\src\platform.h.in;D:\haomaiyi\ncnn-win\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\haomaiyi\ncnn-win\build_vs2015\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\blob.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\cpu.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\mat.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\mat_pixel.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\modelbin.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\net.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\opencv.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\paramdict.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\benchmark.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\absval.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\batchnorm.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\bias.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\bnll.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\concat.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\convolution.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\x86\convolution_x86.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\crop.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\deconvolution.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\dropout.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\eltwise.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\elu.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\embed.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\exp.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\flatten.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\innerproduct.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\input.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\log.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\lrn.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\memorydata.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\mvn.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\pooling.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\power.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\prelu.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\proposal.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\reduction.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\relu.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\reshape.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\roipooling.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\scale.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\sigmoid.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\slice.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\softmax.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\split.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\tanh.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\threshold.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\binaryop.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\unaryop.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\convolutiondepthwise.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\x86\convolutiondepthwise_x86.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\padding.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\squeeze.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\expanddims.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\normalize.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\permute.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\priorbox.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\detectionoutput.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\interp.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\deconvolutiondepthwise.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\shufflechannel.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\instancenorm.cpp"  />
+    <ClCompile Include="D:\haomaiyi\ncnn-win\src\layer\clip.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/haomaiyi/ncnn-win/build_vs2015/ZERO_CHECK.vcxproj">
+      <Project>E31B06D5-72A3-30F6-B411-CB1A02827CA7</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

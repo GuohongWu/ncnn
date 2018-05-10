@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\haomaiyi\ncnn-win\tools\caffe\caffe2ncnn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\haomaiyi\ncnn-win\build_vs2015\tools\caffe\caffe.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\haomaiyi\ncnn-win\build_vs2015\tools\caffe\caffe.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\haomaiyi\ncnn-win\tools\caffe\CMakeLists.txt" />
+    <CustomBuild Include="D:\haomaiyi\ncnn-win\build_vs2015\CMakeFiles\767c76238d2aab3565536a39ac46829d\caffe.pb.cc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4453C89D-26AC-3620-8119-CF92C9C6A105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{84490E7E-E3C9-30E7-ACD6-2D79127792D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{81200EDF-8280-3C59-A22B-669EFE162C89}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

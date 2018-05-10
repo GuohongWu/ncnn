@@ -1,5 +1,5 @@
 # CMake build directory
-*build*/
+# *build*/
 
 # Backup files.
 *~
@@ -36,3 +36,4 @@
 *.exe
 *.out
 *.app
+3rdparty

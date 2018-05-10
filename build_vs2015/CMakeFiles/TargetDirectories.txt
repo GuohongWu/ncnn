@@ -1,0 +1,12 @@
+D:/haomaiyi/ncnn-win/build_vs2015/tools/onnx/CMakeFiles/onnx2ncnn.dir
+D:/haomaiyi/ncnn-win/build_vs2015/tools/CMakeFiles/ncnn2mem.dir
+D:/haomaiyi/ncnn-win/build_vs2015/benchmark/CMakeFiles/benchncnn.dir
+D:/haomaiyi/ncnn-win/build_vs2015/examples/ssd/CMakeFiles/ssdmobilenet.dir
+D:/haomaiyi/ncnn-win/build_vs2015/src/CMakeFiles/ncnn.dir
+D:/haomaiyi/ncnn-win/build_vs2015/CMakeFiles/ALL_BUILD.dir
+D:/haomaiyi/ncnn-win/build_vs2015/tools/mxnet/CMakeFiles/mxnet2ncnn.dir
+D:/haomaiyi/ncnn-win/build_vs2015/examples/ssd/CMakeFiles/ssdsqueezenet.dir
+D:/haomaiyi/ncnn-win/build_vs2015/CMakeFiles/ZERO_CHECK.dir
+D:/haomaiyi/ncnn-win/build_vs2015/tools/caffe/CMakeFiles/caffe2ncnn.dir
+D:/haomaiyi/ncnn-win/build_vs2015/examples/CMakeFiles/squeezenet.dir
+D:/haomaiyi/ncnn-win/build_vs2015/examples/CMakeFiles/fasterrcnn.dir

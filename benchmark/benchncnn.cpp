@@ -1,5 +1,6 @@
 #include <float.h>
 #include <stdio.h>
+#include <algorithm>
 
 #ifdef _WIN32
 #include <windows.h> // Sleep()
@@ -84,8 +85,8 @@ void benchmark(const char* comment, void (*init)(ncnn::Net&), void (*run)(const 
 
         double time = end - start;
 
-        time_min = std::min(time_min, time);
-        time_max = std::max(time_max, time);
+        time_min = (std::min)(time_min, time);
+        time_max = (std::max)(time_max, time);
         time_avg += time;
     }
 

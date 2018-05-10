@@ -1,0 +1,23 @@
+﻿  layer.cpp
+d:\haomaiyi\ncnn-win\src\mat.h(333): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  convolution.cpp
+d:\haomaiyi\ncnn-win\src\mat.h(333): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  convolutiondepthwise_x86.cpp
+d:\haomaiyi\ncnn-win\src\mat.h(333): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  net.cpp
+d:\haomaiyi\ncnn-win\src\mat.h(333): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\haomaiyi\ncnn-win\src\net.cpp(405): warning C4311: “类型转换”: 从“const unsigned char *”到“unsigned long”的指针截断
+D:\haomaiyi\ncnn-win\src\net.cpp(405): warning C4302: “类型转换”: 从“const unsigned char *”到“unsigned long”截断
+D:\haomaiyi\ncnn-win\src\net.cpp(509): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
+D:\haomaiyi\ncnn-win\src\net.cpp(520): warning C4311: “类型转换”: 从“const unsigned char *”到“unsigned long”的指针截断
+D:\haomaiyi\ncnn-win\src\net.cpp(520): warning C4302: “类型转换”: 从“const unsigned char *”到“unsigned long”截断
+D:\haomaiyi\ncnn-win\src\net.cpp(541): warning C4244: “return”: 从“__int64”转换到“int”，可能丢失数据
+D:\haomaiyi\ncnn-win\src\net.cpp(556): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+D:\haomaiyi\ncnn-win\src\net.cpp(567): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\haomaiyi\ncnn-win\src\net.cpp(582): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\haomaiyi\ncnn-win\src\net.cpp(592): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\haomaiyi\ncnn-win\src\net.cpp(592): warning C4267: “初始化”: 从“size_t”转换到“const int”，可能丢失数据
+D:\haomaiyi\ncnn-win\src\net.cpp(614): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\haomaiyi\ncnn-win\src\net.cpp(614): warning C4267: “初始化”: 从“size_t”转换到“const int”，可能丢失数据
+  正在生成代码...
+  ncnn.vcxproj -> D:\haomaiyi\ncnn-win\build_vs2015\src\Debug\ncnn.lib

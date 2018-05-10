@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+D:/haomaiyi/ncnn-win/examples/ssd/CMakeLists.txt
+D:/haomaiyi/ncnn-win/3rdparty/opencv/build/OpenCVConfig-version.cmake
+D:/haomaiyi/ncnn-win/3rdparty/opencv/build/OpenCVConfig.cmake
+D:/haomaiyi/ncnn-win/3rdparty/opencv/build/x64/vc14/lib/OpenCVConfig.cmake
+C:/Users/Administrator/Desktop/zhuqi/cmake-3.4.1-win32-x86/share/cmake-3.4/Modules/FindPackageHandleStandardArgs.cmake
+C:/Users/Administrator/Desktop/zhuqi/cmake-3.4.1-win32-x86/share/cmake-3.4/Modules/FindPackageMessage.cmake
+C:/Users/Administrator/Desktop/zhuqi/cmake-3.4.1-win32-x86/share/cmake-3.4/Modules/CMakeParseArguments.cmake
