@@ -70,3 +70,8 @@ add_subdirectory(src)
 if(NOT ANDROID AND NOT IOS)
 add_subdirectory(tools)
 endif()
+
+IF(WIN32)
+	set(CMAKE_CXX_FLAGS_RELEASE "/MT")
+    set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
+ENDIF(WIN32)

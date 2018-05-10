@@ -164,3 +164,8 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/platform.h
     DESTINATION include
 )
+
+IF(WIN32)
+	set(CMAKE_CXX_FLAGS_RELEASE "/MT")
+    set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
+ENDIF(WIN32)

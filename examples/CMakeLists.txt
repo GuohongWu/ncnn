@@ -21,3 +21,8 @@ add_executable(fasterrcnn fasterrcnn.cpp)
 target_link_libraries(fasterrcnn ncnn ${OpenCV_LIBS})
 
 add_subdirectory(ssd)
+
+IF(WIN32)
+	set(CMAKE_CXX_FLAGS_RELEASE "/MT")
+    set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
+ENDIF(WIN32)

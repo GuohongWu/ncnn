@@ -12,3 +12,8 @@ target_link_libraries(ssdmobilenet ncnn ${OpenCV_LIBS})
 
 add_executable(ssdsqueezenet ssdsqueezenet.cpp)
 target_link_libraries(ssdsqueezenet ncnn ${OpenCV_LIBS})
+
+IF(WIN32)
+	set(CMAKE_CXX_FLAGS_RELEASE "/MT")
+    set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
+ENDIF(WIN32)

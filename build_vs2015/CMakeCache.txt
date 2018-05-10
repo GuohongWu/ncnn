@@ -491,7 +491,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[D:/haomaiyi/ncnn-win/3rdparty/open
 //Details about finding OpenMP
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[/openmp][/openmp][v()]
 //Details about finding PROTOBUF
-FIND_PACKAGE_MESSAGE_DETAILS_PROTOBUF:INTERNAL=[D:/haomaiyi/ncnn-win/3rdparty/protobuf-3.0.2/cmake/build/protobuf/lib][D:/haomaiyi/ncnn-win/3rdparty/protobuf-3.0.2/cmake/build/protobuf/include][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_PROTOBUF:INTERNAL=[libprotobuf.lib][D:/haomaiyi/ncnn-win/3rdparty/protobuf-3.0.2/cmake/build/protobuf/include][v()]
 //ADVANCED property for variable: OpenMP_CXX_FLAGS
 OpenMP_CXX_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenMP_C_FLAGS
