@@ -20,11 +20,11 @@
 
 #include "net.h"
 
-static int detect_squeezenet(const cv::Mat& bgr, std::vector<float>& cls_scores)
+static int detect_squeezenet(const cv::Mat& bgr, std::vector<float>& cls_scores, const std::string &model_dir)
 {
     ncnn::Net squeezenet;
-    squeezenet.load_param("squeezenet_v1.1.param");
-    squeezenet.load_model("squeezenet_v1.1.bin");
+    squeezenet.load_param((model_dir + "squeezenet_v1.1.param").c_str());
+    squeezenet.load_model((model_dir + "squeezenet_v1.1.bin").c_str());
 
     ncnn::Mat in = ncnn::Mat::from_pixels_resize(bgr.data, ncnn::Mat::PIXEL_BGR, bgr.cols, bgr.rows, 227, 227);
 
@@ -76,6 +76,7 @@ static int print_topk(const std::vector<float>& cls_scores, int topk)
 int main(int argc, char** argv)
 {
     const char* imagepath = argv[1];
+	std::string model_dir = argv[2];
 
     cv::Mat m = cv::imread(imagepath, CV_LOAD_IMAGE_COLOR);
     if (m.empty())
@@ -85,7 +86,7 @@ int main(int argc, char** argv)
     }
 
     std::vector<float> cls_scores;
-    detect_squeezenet(m, cls_scores);
+    detect_squeezenet(m, cls_scores, model_dir);
 
     print_topk(cls_scores, 3);
 

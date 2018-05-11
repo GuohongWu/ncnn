@@ -1191,5 +1191,6 @@ int main(int argc, char** argv)
     fclose(pp);
     fclose(bp);
 
+	system("pause");
     return 0;
 }

@@ -35,7 +35,7 @@ const char* class_names[] = {"background",
                             "motorbike", "person", "pottedplant",
                             "sheep", "sofa", "train", "tvmonitor"};
 
-static int detect_mobilenet(cv::Mat& raw_img, float show_threshold)
+static int detect_mobilenet(cv::Mat& raw_img, float show_threshold, const std::string &model_dir)
 {
     ncnn::Net mobilenet;
     /*
@@ -44,8 +44,8 @@ static int detect_mobilenet(cv::Mat& raw_img, float show_threshold)
      */
     int img_h = raw_img.size().height;
     int img_w = raw_img.size().width;
-    mobilenet.load_param("mobilenet_ssd_voc_ncnn.param");
-    mobilenet.load_model("mobilenet_ssd_voc_ncnn.bin");
+    mobilenet.load_param((model_dir + "mobilenet_ssd_voc_ncnn.param").c_str());
+    mobilenet.load_model((model_dir + "mobilenet_ssd_voc_ncnn.bin").c_str());
     int input_size = 300;
     ncnn::Mat in = ncnn::Mat::from_pixels_resize(raw_img.data, ncnn::Mat::PIXEL_BGR, raw_img.cols, raw_img.rows, input_size, input_size);
 
@@ -95,6 +95,8 @@ static int detect_mobilenet(cv::Mat& raw_img, float show_threshold)
                     cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
         }
     }
+
+	cv::namedWindow("result", CV_WINDOW_NORMAL);
     cv::imshow("result",raw_img);
     cv::waitKey();
 
@@ -104,6 +106,7 @@ static int detect_mobilenet(cv::Mat& raw_img, float show_threshold)
 int main(int argc, char** argv)
 {
     const char* imagepath = argv[1];
+	std::string model_dir = argv[2];
 
     cv::Mat m = cv::imread(imagepath, CV_LOAD_IMAGE_COLOR);
     if (m.empty())
@@ -112,7 +115,7 @@ int main(int argc, char** argv)
         return -1;
     }
 
-    detect_mobilenet(m,0.5);
+    detect_mobilenet(m, 0.5, model_dir);
 
     return 0;
 }

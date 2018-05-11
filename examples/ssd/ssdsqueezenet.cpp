@@ -27,15 +27,15 @@ struct Object
     float prob;
 };
 
-static int detect_squeezenet(const cv::Mat& bgr, std::vector<Object>& objects)
+static int detect_squeezenet(const cv::Mat& bgr, std::vector<Object>& objects, const std::string &model_dir)
 {
     ncnn::Net squeezenet;
 
     // original pretrained model from https://github.com/chuanqi305/SqueezeNet-SSD
     // squeezenet_ssd_voc_deploy.prototxt
     // https://drive.google.com/open?id=0B3gersZ2cHIxdGpyZlZnbEQ5Snc
-    squeezenet.load_param("squeezenet_ssd_voc.param");
-    squeezenet.load_model("squeezenet_ssd_voc.bin");
+    squeezenet.load_param((model_dir + "squeezenet_ssd_voc.proto").c_str());
+    squeezenet.load_model((model_dir + "squeezenet_ssd_voc.bin").c_str());
 
     const int target_size = 300;
 
@@ -117,6 +117,7 @@ static void draw_objects(const cv::Mat& bgr, const std::vector<Object>& objects)
                     cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
     }
 
+	cv::namedWindow("image", CV_WINDOW_NORMAL);
     cv::imshow("image", image);
     cv::waitKey(0);
 }
@@ -124,6 +125,7 @@ static void draw_objects(const cv::Mat& bgr, const std::vector<Object>& objects)
 int main(int argc, char** argv)
 {
     const char* imagepath = argv[1];
+	std::string model_dir = argv[2];
 
     cv::Mat m = cv::imread(imagepath, CV_LOAD_IMAGE_COLOR);
     if (m.empty())
@@ -133,7 +135,7 @@ int main(int argc, char** argv)
     }
 
     std::vector<Object> objects;
-    detect_squeezenet(m, objects);
+    detect_squeezenet(m, objects, model_dir);
 
     draw_objects(m, objects);
 
