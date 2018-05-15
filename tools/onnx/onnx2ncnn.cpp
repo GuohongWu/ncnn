@@ -497,6 +497,10 @@ int main(int argc, char** argv)
             fprintf(pp, "%-16s", "Dropout");
             output_size = 1;
         }
+        else if (op == "Elu")
+        {
+            fprintf(pp, "%-16s", "ELU");
+        }
         else if (op == "Gemm")
         {
             float alpha = get_node_attr_f(node, "alpha", 1.f);
@@ -547,6 +551,14 @@ int main(int argc, char** argv)
         else if (op == "Mul")
         {
             fprintf(pp, "%-16s", "BinaryOp");
+        }
+        else if (op == "Pad")
+        {
+            fprintf(pp, "%-16s", "Padding");
+        }
+        else if (op == "PRelu")
+        {
+            fprintf(pp, "%-16s", "PReLU");
         }
         else if (op == "Relu")
         {
@@ -890,6 +902,11 @@ int main(int argc, char** argv)
         {
             // no-op
         }
+        else if (op == "Elu")
+        {
+            float alpha = get_node_attr_f(node, "alpha", 1.f);
+            fprintf(pp, " 0=%f", alpha);
+        }
         else if (op == "Gemm")
         {
             float alpha = get_node_attr_f(node, "alpha", 1.f);
@@ -1019,6 +1036,48 @@ int main(int argc, char** argv)
         {
             int op_type = 2;
             fprintf(pp, " 0=%d", op_type);
+        }
+        else if (op == "Pad")
+        {
+            std::string mode = get_node_attr_s(node, "mode");
+            std::vector<int> pads = get_node_attr_ai(node, "pads");
+            float value = get_node_attr_f(node, "value", 0.f);
+
+            int type = 0;
+            if (mode == "constant")
+            {
+                type = 0;
+            }
+            else if (mode == "edge")
+            {
+                type = 1;
+            }
+            else if (mode == "reflect")
+            {
+                // FIXME
+            }
+
+            int top = pads[0];
+            int bottom = pads[2];
+            int left = pads[1];
+            int right = pads[3];
+
+            fprintf(pp, " 0=%d", top);
+            fprintf(pp, " 1=%d", bottom);
+            fprintf(pp, " 2=%d", left);
+            fprintf(pp, " 3=%d", right);
+            fprintf(pp, " 4=%d", type);
+            fprintf(pp, " 5=%f", value);
+        }
+        else if (op == "PRelu")
+        {
+            const onnx::TensorProto& slope = weights[node.input(1)];
+
+            int num_slope = get_tensor_proto_data_size(slope);
+
+            fprintf(pp, " 0=%d", num_slope);
+
+            fwrite_tensor_proto_data(slope, bp);
         }
         else if (op == "Reshape")
         {

@@ -745,11 +745,39 @@ int main(int argc, char** argv)
 
             fprintf(pp, "%-16s", "Input");
         }
+        else if (n.op == "_div_scalar")
+        {
+            fprintf(pp, "%-16s", "BinaryOp");
+        }
+        else if (n.op == "_maximum_scalar")
+        {
+            fprintf(pp, "%-16s", "BinaryOp");
+        }
+        else if (n.op == "_minimum_scalar")
+        {
+            fprintf(pp, "%-16s", "BinaryOp");
+        }
         else if (n.op == "_minus_scalar")
         {
             fprintf(pp, "%-16s", "BinaryOp");
         }
         else if (n.op == "_mul_scalar")
+        {
+            fprintf(pp, "%-16s", "BinaryOp");
+        }
+        else if (n.op == "_plus_scalar")
+        {
+            fprintf(pp, "%-16s", "BinaryOp");
+        }
+        else if (n.op == "_power_scalar")
+        {
+            fprintf(pp, "%-16s", "BinaryOp");
+        }
+        else if (n.op == "_rdiv_scalar")
+        {
+            fprintf(pp, "%-16s", "BinaryOp");
+        }
+        else if (n.op == "_rminus_scalar")
         {
             fprintf(pp, "%-16s", "BinaryOp");
         }
@@ -1070,6 +1098,33 @@ int main(int argc, char** argv)
             // dummy input shape
 //             fprintf(pp, " 0 0 0");
         }
+        else if (n.op == "_div_scalar")
+        {
+            int op_type = 3;
+            int with_scalar = 1;
+            float scalar = n.attr("scalar");
+            fprintf(pp, " 0=%d", op_type);
+            fprintf(pp, " 1=%d", with_scalar);
+            fprintf(pp, " 2=%f", scalar);
+        }
+        else if (n.op == "_maximum_scalar")
+        {
+            int op_type = 4;
+            int with_scalar = 1;
+            float scalar = n.attr("scalar");
+            fprintf(pp, " 0=%d", op_type);
+            fprintf(pp, " 1=%d", with_scalar);
+            fprintf(pp, " 2=%f", scalar);
+        }
+        else if (n.op == "_minimum_scalar")
+        {
+            int op_type = 5;
+            int with_scalar = 1;
+            float scalar = n.attr("scalar");
+            fprintf(pp, " 0=%d", op_type);
+            fprintf(pp, " 1=%d", with_scalar);
+            fprintf(pp, " 2=%f", scalar);
+        }
         else if (n.op == "_minus_scalar")
         {
             int op_type = 1;
@@ -1082,6 +1137,42 @@ int main(int argc, char** argv)
         else if (n.op == "_mul_scalar")
         {
             int op_type = 2;
+            int with_scalar = 1;
+            float scalar = n.attr("scalar");
+            fprintf(pp, " 0=%d", op_type);
+            fprintf(pp, " 1=%d", with_scalar);
+            fprintf(pp, " 2=%f", scalar);
+        }
+        else if (n.op == "_plus_scalar")
+        {
+            int op_type = 0;
+            int with_scalar = 1;
+            float scalar = n.attr("scalar");
+            fprintf(pp, " 0=%d", op_type);
+            fprintf(pp, " 1=%d", with_scalar);
+            fprintf(pp, " 2=%f", scalar);
+        }
+        else if (n.op == "_power_scalar")
+        {
+            int op_type = 6;
+            int with_scalar = 1;
+            float scalar = n.attr("scalar");
+            fprintf(pp, " 0=%d", op_type);
+            fprintf(pp, " 1=%d", with_scalar);
+            fprintf(pp, " 2=%f", scalar);
+        }
+        else if (n.op == "_rdiv_scalar")
+        {
+            int op_type = 8;
+            int with_scalar = 1;
+            float scalar = n.attr("scalar");
+            fprintf(pp, " 0=%d", op_type);
+            fprintf(pp, " 1=%d", with_scalar);
+            fprintf(pp, " 2=%f", scalar);
+        }
+        else if (n.op == "_rminus_scalar")
+        {
+            int op_type = 7;
             int with_scalar = 1;
             float scalar = n.attr("scalar");
             fprintf(pp, " 0=%d", op_type);

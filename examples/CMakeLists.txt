@@ -20,6 +20,9 @@ target_link_libraries(squeezenet ncnn ${OpenCV_LIBS})
 add_executable(fasterrcnn fasterrcnn.cpp)
 target_link_libraries(fasterrcnn ncnn ${OpenCV_LIBS})
 
+add_executable(s3fd s3fd.cpp)
+target_link_libraries(s3fd ncnn ${OpenCV_LIBS})
+
 add_subdirectory(ssd)
 
 IF(WIN32)

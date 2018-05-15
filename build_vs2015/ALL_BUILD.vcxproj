@@ -186,6 +186,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="D:/haomaiyi/ncnn-win/build_vs2015/tools/onnx/onnx2ncnn.vcxproj">
       <Project>1A276F1C-10B4-3730-BDBE-8756CD19DF73</Project>
     </ProjectReference>
+    <ProjectReference Include="D:/haomaiyi/ncnn-win/build_vs2015/examples/s3fd.vcxproj">
+      <Project>8925D369-C8F9-3DD9-898D-08F1BA794C5D</Project>
+    </ProjectReference>
     <ProjectReference Include="D:/haomaiyi/ncnn-win/build_vs2015/examples/squeezenet.vcxproj">
       <Project>90742E90-BF7B-3DEE-99EF-1748D52C9D45</Project>
     </ProjectReference>
