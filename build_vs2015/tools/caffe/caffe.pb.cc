@@ -2343,7 +2343,7 @@ void protobuf_AddDesc_caffe_2eproto() {
     "r\022\034\n\016across_spatial\030\001 \001(\010:\004true\022,\n\014scale"
     "_filler\030\002 \001(\0132\026.caffe.FillerParameter\022\034\n"
     "\016channel_shared\030\003 \001(\010:\004true\022\022\n\003eps\030\004 \001(\002"
-    ":\0051e-10\"!\n\020PermuteParameter\022\r\n\005order\030\001 \003"
+    ":\0051e-06\"!\n\020PermuteParameter\022\r\n\005order\030\001 \003"
     "(\r\"\242\003\n\020PoolingParameter\0225\n\004pool\030\001 \001(\0162\"."
     "caffe.PoolingParameter.PoolMethod:\003MAX\022\016"
     "\n\003pad\030\004 \001(\r:\0010\022\020\n\005pad_h\030\t \001(\r:\0010\022\020\n\005pad_"
@@ -36370,7 +36370,7 @@ void NormalizeParameter::SharedCtor() {
   across_spatial_ = true;
   scale_filler_ = NULL;
   channel_shared_ = true;
-  eps_ = 1e-10f;
+  eps_ = 1e-06f;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -36418,7 +36418,7 @@ void NormalizeParameter::Clear() {
       if (scale_filler_ != NULL) scale_filler_->::caffe::FillerParameter::Clear();
     }
     channel_shared_ = true;
-    eps_ = 1e-10f;
+    eps_ = 1e-06f;
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   if (_internal_metadata_.have_unknown_fields()) {
@@ -36478,7 +36478,7 @@ bool NormalizeParameter::MergePartialFromCodedStream(
         break;
       }
 
-      // optional float eps = 4 [default = 1e-10];
+      // optional float eps = 4 [default = 1e-06];
       case 4: {
         if (tag == 37) {
          parse_eps:
@@ -36534,7 +36534,7 @@ void NormalizeParameter::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->channel_shared(), output);
   }
 
-  // optional float eps = 4 [default = 1e-10];
+  // optional float eps = 4 [default = 1e-06];
   if (has_eps()) {
     ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->eps(), output);
   }
@@ -36566,7 +36566,7 @@ void NormalizeParameter::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->channel_shared(), target);
   }
 
-  // optional float eps = 4 [default = 1e-10];
+  // optional float eps = 4 [default = 1e-06];
   if (has_eps()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->eps(), target);
   }
@@ -36601,7 +36601,7 @@ int NormalizeParameter::ByteSize() const {
       total_size += 1 + 1;
     }
 
-    // optional float eps = 4 [default = 1e-10];
+    // optional float eps = 4 [default = 1e-06];
     if (has_eps()) {
       total_size += 1 + 4;
     }
@@ -36791,7 +36791,7 @@ void NormalizeParameter::clear_channel_shared() {
   // @@protoc_insertion_point(field_set:caffe.NormalizeParameter.channel_shared)
 }
 
-// optional float eps = 4 [default = 1e-10];
+// optional float eps = 4 [default = 1e-06];
 bool NormalizeParameter::has_eps() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
@@ -36802,7 +36802,7 @@ void NormalizeParameter::clear_has_eps() {
   _has_bits_[0] &= ~0x00000008u;
 }
 void NormalizeParameter::clear_eps() {
-  eps_ = 1e-10f;
+  eps_ = 1e-06f;
   clear_has_eps();
 }
  float NormalizeParameter::eps() const {

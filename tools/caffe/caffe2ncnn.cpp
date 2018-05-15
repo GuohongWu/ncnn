@@ -209,6 +209,7 @@ int main(int argc, char** argv)
     if (!(argc == 3 || argc == 5 || argc == 6))
     {
         fprintf(stderr, "Usage: %s [caffeproto] [caffemodel] [ncnnproto] [ncnnbin] [quantizelevel]\n", argv[0]);
+		system("pause");
         return -1;
     }
 
@@ -221,26 +222,34 @@ int main(int argc, char** argv)
 
     if (quantize_level != 0 && quantize_level != 256 && quantize_level != 65536) {
         fprintf(stderr, "%s: only support quantize level = 0, 256, or 65536", argv[0]);
+		system("pause");
         return -1;
     }
 
     caffe::NetParameter proto;
     caffe::NetParameter net;
+	system("pause");
 
     // load
     bool s0 = read_proto_from_text(caffeproto, &proto);
     if (!s0)
     {
         fprintf(stderr, "read_proto_from_text failed\n");
+		system("pause");
         return -1;
     }
+	else
+		fprintf(stderr, "read_proto_from_text successed\n");
 
     bool s1 = read_proto_from_binary(caffemodel, &net);
     if (!s1)
     {
         fprintf(stderr, "read_proto_from_binary failed\n");
+		system("pause");
         return -1;
     }
+	else
+		fprintf(stderr, "read_proto_from_binary successed\n");
 
     FILE* pp = fopen(ncnn_prototxt, "wb");
     FILE* bp = fopen(ncnn_modelbin, "wb");

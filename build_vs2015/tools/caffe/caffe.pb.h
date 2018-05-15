@@ -8422,7 +8422,7 @@ class NormalizeParameter : public ::google::protobuf::Message {
   bool channel_shared() const;
   void set_channel_shared(bool value);
 
-  // optional float eps = 4 [default = 1e-10];
+  // optional float eps = 4 [default = 1e-06];
   bool has_eps() const;
   void clear_eps();
   static const int kEpsFieldNumber = 4;
@@ -22932,7 +22932,7 @@ inline void NormalizeParameter::set_channel_shared(bool value) {
   // @@protoc_insertion_point(field_set:caffe.NormalizeParameter.channel_shared)
 }
 
-// optional float eps = 4 [default = 1e-10];
+// optional float eps = 4 [default = 1e-06];
 inline bool NormalizeParameter::has_eps() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
@@ -22943,7 +22943,7 @@ inline void NormalizeParameter::clear_has_eps() {
   _has_bits_[0] &= ~0x00000008u;
 }
 inline void NormalizeParameter::clear_eps() {
-  eps_ = 1e-10f;
+  eps_ = 1e-06f;
   clear_has_eps();
 }
 inline float NormalizeParameter::eps() const {
