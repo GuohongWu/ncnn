@@ -51,13 +51,14 @@ public:
 
 static int g_loop_count = 4;
 
-void benchmark(const char* comment, void (*init)(ncnn::Net&), void (*run)(const ncnn::Net&))
+void benchmark(const char* comment, void (*init)(ncnn::Net&), void (*run)(const ncnn::Net&), bool load_model_from_out = false)
 {
     ncnn::BenchNet net;
 
     init(net);
 
-    net.load_model();
+	if(!load_model_from_out)
+		net.load_model();
 
     // sleep 10 seconds for cooling down SOC  :(
 #ifdef _WIN32
@@ -95,9 +96,65 @@ void benchmark(const char* comment, void (*init)(ncnn::Net&), void (*run)(const 
     fprintf(stderr, "%16s  min = %7.2f  max = %7.2f  avg = %7.2f\n", comment, time_min, time_max, time_avg);
 }
 
+void myNet_init(ncnn::Net& net)
+{
+	net.load_param("MNet18_v2_3.param");
+	net.load_model("MNet18_v2_3.bin");
+}
+
+void myNet_run(const ncnn::Net& net)
+{
+	ncnn::Extractor ex = net.create_extractor();
+
+	ncnn::Mat in(256, 320, 3);
+	ex.input("data", in);
+
+	ncnn::Mat out1, out2, out3, out4, out5, out6, out7, out8;
+	ex.extract("detect_6_2_cls_softmax_6_2", out1);
+	ex.extract("detect_6_2_reg", out2);
+	ex.extract("detect_fc7_cls_softmax_fc7", out3);
+	ex.extract("detect_fc7_reg", out4);
+	ex.extract("detect_5_3_cls_softmax_5_3", out5);
+	ex.extract("detect_5_3_reg", out6);
+	ex.extract("detect_4_3_cls_softmax_4_3", out7);
+	ex.extract("detect_4_3_reg", out8);
+}
+
+void peleenet_init(ncnn::Net& net)
+{
+	net.load_param("pelee.param");
+}
+
+void peleenet_run(const ncnn::Net& net)
+{
+	ncnn::Extractor ex = net.create_extractor();
+
+	ncnn::Mat in(304, 304, 3);
+	ex.input("data", in);
+
+	ncnn::Mat out;
+	ex.extract("detection_out", out);
+}
+
+void faceboxnet_init(ncnn::Net& net)
+{
+	net.load_param("faceboxes.param");
+}
+
+void faceboxnet_run(const ncnn::Net& net)
+{
+	ncnn::Extractor ex = net.create_extractor();
+
+	ncnn::Mat in(1024, 1024, 3);
+	ex.input("data", in);
+
+	ncnn::Mat out;
+	ex.extract("detection_out", out);
+}
+
 void squeezenet_init(ncnn::Net& net)
 {
-    net.load_param("squeezenet.param");
+    net.load_param("squeezenet_v1.1.param");
 }
 
 void squeezenet_run(const ncnn::Net& net)
@@ -136,7 +193,7 @@ void mobilenet_v2_run(const ncnn::Net& net)
 {
     ncnn::Extractor ex = net.create_extractor();
 
-    ncnn::Mat in(224, 224, 3);
+    ncnn::Mat in(320, 256, 3);
     ex.input("data", in);
 
     ncnn::Mat out;
@@ -286,11 +343,17 @@ int main(int argc, char** argv)
     fprintf(stderr, "powersave = %d\n", ncnn::get_cpu_powersave());
 
     // run
-    benchmark("squeezenet", squeezenet_init, squeezenet_run);
+	benchmark("myNet", myNet_init, myNet_run, true);
 
-    benchmark("mobilenet", mobilenet_init, mobilenet_run);
+    benchmark("squeezenet_v1.1", squeezenet_init, squeezenet_run);
 
-    benchmark("mobilenet_v2", mobilenet_v2_init, mobilenet_v2_run);
+	benchmark("mobilenet_v2", mobilenet_v2_init, mobilenet_v2_run);
+
+	benchmark("Pelee", peleenet_init, peleenet_run);
+
+	benchmark("FaceBox", faceboxnet_init, faceboxnet_run);
+
+    /*benchmark("mobilenet", mobilenet_init, mobilenet_run);
 
     benchmark("shufflenet", shufflenet_init, shufflenet_run);
 
@@ -304,7 +367,7 @@ int main(int argc, char** argv)
 
     benchmark("squeezenet-ssd", squeezenet_ssd_init, squeezenet_ssd_run);
 
-    benchmark("mobilenet-ssd", mobilenet_ssd_init, mobilenet_ssd_run);
+    benchmark("mobilenet-ssd", mobilenet_ssd_init, mobilenet_ssd_run);*/
 
     return 0;
 }

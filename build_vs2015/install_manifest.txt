@@ -1,0 +1,13 @@
+D:/haomaiyi/ncnn-win/build_vs2015/install/lib/ncnn.lib
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/blob.h
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/cpu.h
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/layer.h
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/layer_type.h
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/mat.h
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/modelbin.h
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/net.h
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/opencv.h
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/paramdict.h
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/benchmark.h
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/layer_type_enum.h
+D:/haomaiyi/ncnn-win/build_vs2015/install/include/platform.h
